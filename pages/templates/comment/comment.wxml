@@ -1,0 +1,17 @@
+<import src="../rate/rate" />
+
+<template name="comment">
+    <view class="comment-line">
+        <view class="avatar-group">
+            <image class="avatar" src="{{comment.user.avatar}}"></image>
+        </view>
+        <view class="comment-detail">
+            <view class="username-rate">
+                <text class="usernname">{{comment.user.name}}</text>
+                <template is="rate" data="{{data:comment.rating}}"></template>
+            </view>
+            <view class="release-time">{{comment.create_time}}</view>
+            <view class="comment-content">{{comment.comment}}</view>
+        </view>
+    </view>
+</template>

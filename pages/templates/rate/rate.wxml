@@ -1,0 +1,8 @@
+
+<template name="rate">
+    <view class='rate-group'>
+        <image src="../images/rate_light.png" wx:for="{{data.lights}}" wx:key="*this"></image>
+        <image src="../images/rate_half.jpg" wx:for="{{data.halfs}}" wx:key="*this"></image>
+        <image src="../images/rate_gray.png" wx:for="{{data.grays}}" wx:key="*this"></image>
+    </view>
+</template>

@@ -1,0 +1,58 @@
+/* pages/comments/comments.wxss */
+
+@import '../templates/rate/rate.wxss';
+@import '../templates/comment/comment.wxss';
+
+page{
+    height: 100%;
+}
+
+.scroll-container{
+    height: 100%;
+}
+
+.container{
+    background: #fff;
+    padding: 10px 18px;
+}
+
+.thumbnail-image{
+    width: 19px;
+    height: 25px;
+    vertical-align: bottom;
+}
+
+.item-title{
+    color: #42be57;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.item-rating{
+    margin-left: 5px;
+    color: #c3c3c3;
+    font-size: 14px;
+}
+
+.comment-list-group{
+    margin-top: 43px;
+}
+
+.comment-title{
+    font-size: 20px;
+}
+
+.page-btn-group{
+    margin-top: 35px;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.page-btn{
+    flex: 1;
+    height: 34px;
+    line-height: 34px;
+    border-color: #898989;
+    color: #898989;
+}

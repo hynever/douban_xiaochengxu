@@ -1,0 +1,14 @@
+
+<template name="item">
+    <view class="item" wx:key="unique">
+        <image src="{{data.cover.url}}" class="item-cover"></image>
+        <text class="item-title">{{data.title}}</text>
+        <view class="item-rate">
+            <image src="../images/rate_light.png" wx:for="{{data.rating.light}}" wx:key="*this"></image>
+            <image src="../images/rate_half.jpg" wx:for="{{data.rating.half}}" wx:key="*this"></image>
+            <image src="../images/rate_gray.png" wx:for="{{data.rating.gray}}" wx:key="*this"></image>
+            <text>{{data.rating.value}}</text>
+        </view>
+    </view>
+</template>
+

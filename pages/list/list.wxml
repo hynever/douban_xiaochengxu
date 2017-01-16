@@ -1,0 +1,16 @@
+<import src="../templates/searchbar/searchbar" />
+<import src="../templates/item/item" />
+
+<scroll-view scroll-y class="outer-scroll-view" bindscrolltolower="scrolltolower">
+    <view class="inner-container">
+        <template is="searchbar"></template>
+        <view class="list-group">
+            <block wx:for="{{items}}">
+                <navigator url="../detail/detail?id={{item.id}}&type={{item.type}}">
+                    <template is="item" data="{{data:item}}" wx:key="{{item.id}}"></template>
+                </navigator> 
+            </block>
+            <view class="item-holder" wx:if="{{items.length%3 == 2}}"></view>
+        </view>
+    </view>
+</scroll-view>

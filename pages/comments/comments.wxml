@@ -1,0 +1,22 @@
+
+<import src="../templates/comment/comment" />
+
+
+<scroll-view scroll-y class='scroll-container' scroll-top="{{scrollTop}}">
+    <view class="container">
+        <view class="item-info-group">
+            <image src="{{itemData.thumbnail}}" class='thumbnail-image'></image>
+            <navigator bindtap="back" class="item-title" type="">{{itemData.title}}</navigator>
+            <text class="item-rating">{{itemData.rating}}分</text>
+        </view>
+        <view class="comment-list-group">
+            <view class="comment-title">全部影评({{short.total}})  </view>
+            <template is="comment" wx:for="{{short.interests}}" wx:for-item="comment" wx:key="{{comment.id}}" data="{{comment:comment}}"></template>
+        </view>
+        <view class="page-btn-group">
+            <button class="page-btn" bindtap='preBtnClick' disabled="{{preLoading}}" loading='{{preLoading}}'>上一页</button>
+            <button class="page-btn" bindtap='nextBtnClick' disabled="{{nextLoading}}" loading="{{nextLoading}}">下一页</button>
+        </view>
+    </view>
+</scroll-view>
+

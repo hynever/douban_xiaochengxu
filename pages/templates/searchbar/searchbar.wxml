@@ -1,0 +1,9 @@
+
+<template name="searchbar">
+    <view class="search-group">
+        <view class="search-input-box">
+            <input class="search-input" auto-focus bindinput="inputEvent" />
+            <navigator class="search-navigator" url="../search/search"></navigator>
+        </view>
+    </view>
+</template>

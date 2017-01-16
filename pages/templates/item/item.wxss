@@ -1,0 +1,40 @@
+.item{
+  width: 100px;
+  display: inline-block;
+  height: 190px;
+}
+
+.item:last-of-type{
+  padding-right: 0;
+}
+
+.item .item-cover{
+  width: 100%;
+  height: 142px;
+  display: block;
+}
+
+.item .item-title{
+  font-size: 14px;
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.item .item-rate{
+  text-align: center;
+}
+
+.item .item-rate image{
+  width: 10px;
+  height: 10px;
+}
+
+.item .item-rate text{
+  color: #ccc;
+  font-size: 10px;
+  padding-left: 2px;
+}

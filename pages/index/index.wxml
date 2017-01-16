@@ -1,0 +1,20 @@
+  <import src="../templates/item/item" />
+  <import src="../templates/searchbar/searchbar" />
+  <view scroll-y="true" class="tableview">
+    <template is="searchbar"></template>
+    <block wx:for="{{modules}}" wx:for-item="module" wx:key="{{module.title}}">
+      <view class="module-group">
+        <view class="module-title">
+          <text class="module-name">{{module.title}}</text>
+          <navigator url="../list/list?name={{module.title}}" class="more-navigator">更多</navigator>
+        </view>
+        <scroll-view class="module-scroll-view" scroll-x="{{true}}">
+          <block wx:for="{{module.data}}" wx:for-item="data" wx:key="{{data.id}}">
+            <navigator url="../detail/detail?id={{data.id}}&type={{data.type}}" class="item-navigator">
+              <template is="item" data="{{data:data}}"></template>
+            </navigator>
+          </block>
+        </scroll-view>
+      </view>
+    </block>
+  </view>

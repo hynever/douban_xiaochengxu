@@ -1,0 +1,36 @@
+
+@import "../templates/searchbar/searchbar.wxss";
+@import "../templates/item/item.wxss";
+
+page{
+    height: 100%;
+    font-family: 'Microsoft Yahei';
+}
+
+.outer-scroll-view{
+    width: 100%;
+    height: 100%;
+}
+
+.inner-container{
+    width: 100%;   
+}
+
+.inner-container .list-group{
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item{
+    padding-bottom: 20px;
+}
+
+.item-holder{
+    width: 100px;
+    display: inline-block;
+    height: 190px;
+}
+

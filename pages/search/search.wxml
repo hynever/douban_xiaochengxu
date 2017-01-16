@@ -1,0 +1,35 @@
+<import src="../templates/searchbar/searchbar" />
+
+
+<template is='searchbar'></template>
+
+<template name="recommand">
+    <view class="recommand-title">
+        <text class='title-text'>{{title}}</text>
+        <block wx:if="{{title == '历史记录'}}">
+            <text class="clear-btn" bindtap="clearHistories">清除</text>
+        </block>
+    </view>
+    <block wx:for="{{items}}" wx:for-item="item" wx:key="{{item.id}}">
+        <view class="item-list" bindtap="gotoDetail" data-id="{{item.id}}" data-type="{{item.type}}" data-name="{{item.name}}">{{item.name}}</view>
+    </block>
+</template>
+
+<view wx:if="{{searchResult.length == 0}}" class="recommand-search-group">
+    <block wx:if="{{histories.length > 0}}">
+        <template is="recommand" data="{{title:'历史记录',items:histories}}"></template>
+    </block>
+    <template is="recommand" data="{{title:'热门搜索',items:hots}}"></template>
+</view>
+
+<view wx:if="{{searchResult.length > 0}}" class="search-result-group">
+    <block wx:for="{{searchResult}}" wx:for-item="item" wx:key="{{item.id}}">
+        <view bindtap="gotoDetail" data-id="{{item.id}}" data-type="{{item.type}}" data-name="{{item.title}}" class="search-result">
+            <image class="thumbnail-image" src="{{item.pic.normal}}"></image>
+            <view class="result-info-group">
+                <view class='result-title'>{{item.title}}</view>
+                <view class='result-rate-year'>{{item.rating.value}}分/{{item.year}}</view>
+            </view>
+        </view>
+    </block>
+</view>

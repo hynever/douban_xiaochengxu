@@ -1,0 +1,41 @@
+.comment-line{
+    margin-top: 22px;
+    display: flex;
+}
+
+.comment-line .avatar-group{
+    width: 35px;
+    margin-right: 10px;
+}
+
+.avatar-group image{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.comment-line .comment-detail{
+    flex: 1;
+}
+
+.username-rate .username{
+    color: #353535;
+    font-size: 14px;
+}
+
+.username-rate .rate-group{
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.comment-detail .release-time{
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.comment-detail .comment-content{
+    color: #353535;
+    font-size: 16px;
+    margin-top: 5px;
+}

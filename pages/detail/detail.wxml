@@ -1,0 +1,47 @@
+
+<import src="../templates/rate/rate" />
+<import src="../templates/comment/comment" />
+
+<view class='container'>
+    <view class="item-title">{{item.title}} {{item.original_title}} ({{item.year}})</view>
+    <view class="item-detail-group">
+        <view class="item-info">
+            <view class="rate-group">
+                <image src="../images/rate_light.png" wx:for="{{item.rating.light}}" wx:key="*this"></image>
+                <image src="../images/rate_half.jpg" wx:for="{{item.rating.half}}" wx:key="*this"></image>
+                <image src="../images/rate_gray.png" wx:for="{{item.rating.gray}}" wx:key="*this"></image>
+                <text class="average-text">{{item.rating.value}}</text>
+                <text class="count-text">{{item.rating.count}}人评价</text>
+            </view>
+            <view class="item-sub-info">
+                <view class="item-type">
+                    <text>{{item.durations[0]}} </text>
+                    <text>{{item.genres}}</text>
+                </view>
+                <view class="item-country">
+                    {{item.pubdate[0]}}上映 {{item.countries[0]}}
+                </view>
+                <view class="item-authors">
+                    {{item.authors}}
+                </view>
+            </view>
+        </view>
+        <view class="item-thumbnail-group">
+            <image class="item-thumbnail" src="{{item.cover.image.small.url}}"></image>
+        </view>
+    </view>
+    <view class="item-tag-group">
+        <view class="item-tag-title">豆瓣成员常用标签</view>
+        <view class="item-tag-list">
+            <text class="item-tag-text" wx:for="{{tags}}" wx:key="*this">{{item}}</text>
+        </view>
+    </view>
+    <view class="comment-group">
+        <view class="comment-title">短评({{short.total}})</view>
+        <view class="comment-list">
+            <template wx:for="{{short.interests}}" wx:for-item="comment" wx:key="{{comment.id}}" is="comment" data="{{comment:comment}}"></template>
+        </view>
+    </view>
+    <navigator class="more-comment-btn" url="../comments/comments?id={{id}}&title={{item.title}}&rating={{item.rating.value}}&type={{item.type}}&thumbnail={{item.cover.image.small.url}}">查看更多短评</navigator>
+</view>
+
