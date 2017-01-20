@@ -1,6 +1,7 @@
 
 @import "../templates/searchbar/searchbar.wxss";
 @import "../templates/item/item.wxss";
+@import "../templates/loading/loading.wxss";
 
 page{
     height: 100%;

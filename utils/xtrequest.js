@@ -78,6 +78,7 @@ var xtrequest = {
             success: function(res){
                 if(res.statusCode == 200){
                     const data = res.data
+                    console.log(data)
                     var items = data.subject_collection_items
                     for(var i=0; i< items.length; i++){
                         var item = items[i]

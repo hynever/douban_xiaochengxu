@@ -1,5 +1,6 @@
 <import src="../templates/searchbar/searchbar" />
 <import src="../templates/item/item" />
+<import src="../templates/loading/loading" />
 
 <scroll-view scroll-y class="outer-scroll-view" bindscrolltolower="scrolltolower">
     <view class="inner-container">
@@ -12,5 +13,6 @@
             </block>
             <view class="item-holder" wx:if="{{items.length%3 == 2}}"></view>
         </view>
+        <template is='loading'></template>
     </view>
 </scroll-view>

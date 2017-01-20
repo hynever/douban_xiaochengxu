@@ -8,7 +8,8 @@ Page({
   data:{
     items: [],
     requestStart: 0,
-    url:''
+    url:'',
+    loading: true
   },
   onLoad:function(options){
     wx.setNavigationBarTitle({
@@ -53,10 +54,17 @@ Page({
             requestStart: that.data.requestStart+newItems.length
           })
         }
+        that.setData({
+          loading: false
+        })
       }
     })
   },
   scrolltolower: function(){
+    var that = this
+    that.setData({
+        loading: false
+    })
     this.refreshData()
   }
 })

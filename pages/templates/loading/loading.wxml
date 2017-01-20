@@ -1,0 +1,5 @@
+
+
+<template name="loading">
+    <button class="load-more-btn" hidden="{{ !loading }}" hover-class="none" loading>加载中...</button>
+</template>

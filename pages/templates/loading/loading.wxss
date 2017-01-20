@@ -1,0 +1,9 @@
+
+.load-more-btn{
+    border: none;
+    background: none;
+    position: static;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
